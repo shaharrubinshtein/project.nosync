@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../screens/OnBoardingStack/Login';
-// import SignUpScreen from '../screens/OnBoardingStack/SignUp'
+import SignUpScreen from '../screens/OnBoardingStack/SignUp'
 // import ForgotPasswordScreen from '../screens/OnBoardingStack/ForgotPassword';
 const Stack = createStackNavigator();
 
@@ -15,13 +15,13 @@ export default OnBoardingStack = () => {
           headerShown: false,
         }}
       />
-      {/* <Stack.Screen
+      <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
         options={{
           headerShown: false,
         }}
-      /> */}
+      />
       {/* <Stack.Screen
         name="ForgotPassword"
         component={ForgotPasswordScreen}

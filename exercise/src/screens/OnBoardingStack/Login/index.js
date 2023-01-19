@@ -71,31 +71,37 @@ export default function LoginScreen(props) {
 
                         <CustomText style={styles.header} text={'Menora Flix'} size={61} color={'#eb0609'} />
 
-                        
-                      <View>
-                        <CustomText style={styles.title} text={'Login'} size={32} color={colors.white} />
 
-                        <View style={{  alignSelf: 'flex-end' }}>
-                            <CustomTextInput
-                                value={userName}
-                                placeholder={'username'}
-                                isError={validUserName}
-                                onChangeText={(value) => setUserName(value)}
-                            />
-                            <CustomTextInput
-                                value={password}
-                                secureTextEntry={true}
-                                placeholder={'password'}
-                                isError={validPassword}
-                                onChangeText={(value) => setPassword(value)}
-                            />
+                        <View>
+                            <CustomText style={styles.title} text={'Login'} size={32} color={colors.white} />
 
-                            <TouchableOpacity onPress={() => handleLogin()} style={styles.button}>
-                                <CustomText style={{ textAlign: 'center' }} text={'Login'} size={17} color={colors.white} />
-                            </TouchableOpacity>
+                            <View style={{ alignSelf: 'flex-end' }}>
+                                <CustomTextInput
+                                    value={userName}
+                                    placeholder={'username'}
+                                    isError={validUserName}
+                                    onChangeText={(value) => setUserName(value)}
+                                />
+                                <CustomTextInput
+                                    value={password}
+                                    secureTextEntry={true}
+                                    placeholder={'password'}
+                                    isError={validPassword}
+                                    onChangeText={(value) => setPassword(value)}
+                                />
+                                <View style={{ alignSelf: 'flex-start' }}>
+                                    <CustomText style={{ fontWeight: 'bold', marginTop:10 }} text={'Don’t have an account?'} size={17} color={'#757575'} />
+                                    <TouchableOpacity onPress={() => { props.navigation.navigate('SignUp') }}>
+                                        <CustomText style={{ marginTop: 5 }} text={'Sign up'} size={17} color={colors.white} />
+                                    </TouchableOpacity>
+                                </View>
+                                
+                                <TouchableOpacity onPress={() => handleLogin()} style={styles.button}>
+                                    <CustomText style={{ textAlign: 'center' }} text={'Login'} size={17} color={colors.white} />
+                                </TouchableOpacity>
 
+                            </View>
                         </View>
-                        </View>  
                     </View>
                 </View>
 
